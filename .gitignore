@@ -1,0 +1,4 @@
+outputs/
+data/*.mp4
+__pycache__/
+*.pyc
