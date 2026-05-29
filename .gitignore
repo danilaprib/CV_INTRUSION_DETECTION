@@ -1,4 +1,17 @@
 outputs/
+
 data/*.mp4
+
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+cvenv/
+venv/
+.venv/
+env/
+ENV/
+
+.vscode/
+.idea/
