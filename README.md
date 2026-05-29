@@ -1,12 +1,12 @@
 # 🛡️ Smart Environment: Intrusion Detection
 
 ## 🎯 Project Objective
-This system detects motion specifically within predefined restricted areas of a video feed. It follows the mandatory 5-stage Computer Vision pipeline to produce an automatic, interpretable "ALARM" result[cite: 3, 12, 13].
+This system detects motion specifically within predefined restricted areas of a video feed. It follows the mandatory 5-stage Computer Vision pipeline to produce an automatic, interpretable "ALARM" result.
 
 ## 👥 Team Roles & Responsibilities
-* **Lead CV Engineer:** Integrates all modules and implements **Detect** and **Decide**[cite: 6].
-* **Image Processing Specialist:** Handles **Enhance** and **Segment** stages[cite: 6].
-* **Morphology & Report Lead:** Manages **Clean** stage and technical documentation[cite: 6].
+* **Lead CV Engineer:** Integrates all modules and implements **Detect** and **Decide**.
+* **Image Processing Specialist:** Handles **Enhance** and **Segment** stages.
+* **Morphology & Report Lead:** Manages **Clean** stage and technical documentation.
 
 ## 🛠 5-Stage Pipeline Mapping
 1.  **Enhance (`preprocessing.py`):** Denoising and CLAHE.
