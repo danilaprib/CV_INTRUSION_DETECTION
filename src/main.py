@@ -14,6 +14,7 @@ should_save = False
 pipeline_stage = 0  # 0: Original, 1: Enhanced, 2: Segmented Mask, 3: Cleaned Mask, 4: Final Analytics Output
 saved_frame_counter = 0
 
+
 def toggle_pause():
     global is_paused
     is_paused = not is_paused
@@ -170,4 +171,5 @@ def main():
     cv2.destroyAllWindows() 
 
 if __name__ == "__main__":
+    print(f"OpenCV Version: {cv2.__version__}")
     main()
