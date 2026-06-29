@@ -23,4 +23,32 @@ This system detects motion specifically within predefined restricted areas of a 
 ## 🚀 How to Run
 1.  `pip install -r requirements.txt`
 2.  `download CV_VIDEOS.rar and upload the videos to 'data' folder`
-3.  `python src/main.py`
+3.  `python src/main.py`  (defaults to `data/walk.mp4`)
+
+### Choosing a video
+* `python src/main.py --video thieves.mp4` — a bare filename resolves inside `data/`.
+* `python src/main.py -v C:/path/to/clip.mp4` — or pass any explicit path.
+
+### Controls
+| Key | Action | | Key | Action |
+|-----|--------|-|-----|--------|
+| `p` | Play / Pause | | `s` | Save current frame to `outputs/` |
+| `r` | Rewind 1s | | `j` | Cycle pipeline stage (0–4) |
+| `f` | Fast-forward 1s | | `z` | Draw a new restricted zone |
+| `q` | Quit | | | |
+
+The toolbar buttons mirror these (except `z`, which is keyboard-only). Shortcuts
+are read by physical key position, so they work regardless of the active OS
+keyboard layout/language (Windows; other platforms fall back to the key char).
+
+### Restricted zone
+By default the **whole frame** is the restricted area, so any motion is treated
+as an intrusion. To restrict monitoring to a sub-region, run the video, press
+`z`, drag a box and press Enter — it applies immediately and prints a pasteable
+line. Drop that line into `RESTRICTED_ZONES` in `src/config.py` (keyed by
+filename) and that video loads its own zone automatically next time;
+`DEFAULT_RESTRICTED_ZONE` (the full frame) is the fallback.
+
+## 🔔 Event log
+Confirmed intrusions are appended to `outputs/events.csv` (timestamp, event,
+duration, bbox) — one row when an intrusion starts and one when it ends.
